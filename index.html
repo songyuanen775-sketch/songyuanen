@@ -1,37 +1,107 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>網站維護中</title>
+    <title>我的第一個網頁</title>
     <style>
+        /* CSS：負責美化 */
         body {
-            background-color: #2c3e50;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             margin: 0;
-            font-family: "Microsoft JhengHei", sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
             text-align: center;
         }
-        .container {
-            border: 2px solid #f1c40f;
-            padding: 40px;
-            border-radius: 15px;
+
+        nav {
+            background: #34495e;
+            padding: 0.5rem;
+            text-align: center;
         }
-        h1 { font-size: 48px; margin-bottom: 10px; }
-        p { font-size: 20px; color: #bdc3c7; }
-        .icon { font-size: 60px; margin-bottom: 20px; }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #d35400;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.8rem;
+            color: #777;
+        }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1>歡迎來到我的網站</h1>
+        <p>這是我用 HTML 與 CSS 打造的小天地</p>
+    </header>
+
+    <nav>
+        <a href="#">首頁</a>
+        <a href="#">關於我</a>
+        <a href="#">聯絡方式</a>
+    </nav>
+
     <div class="container">
-        <div class="icon">🚧</div>
-        <h1>主機維護中</h1>
-        <p>老闆正在更新系統，請稍後再回來看看！</p>
-        <p style="font-size: 14px;">預計恢復時間：晚點再說</p>
+        <h2>關於這個網站</h2>
+        <p>這是一個基礎的 HTML5 範本。你可以透過修改 `style` 標籤內的內容來改變顏色，或是修改 `body` 裡的內容來增加文字。</p>
+        
+        <h3>我學習的技術</h3>
+        <ul>
+            <li>HTML5 - 網頁結構</li>
+            <li>CSS3 - 視覺設計</li>
+            <li>JavaScript - 動態功能</li>
+        </ul>
+
+        <a href="#" class="btn" onclick="sayHello()">點擊互動</a>
     </div>
+
+    <footer>
+        &copy; 2026 我的網站版權所有
+    </footer>
+
+    <script>
+        // JavaScript：負責互動
+        function sayHello() {
+            alert('哈囉！感謝你點擊這個按鈕！');
+        }
+    </script>
+
 </body>
 </html>
